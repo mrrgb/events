@@ -77,6 +77,11 @@ class EventTest(UserAPITestCase):
         event = response.data[0]
         self.assertEqual(event['description'], 'test description')
 
+    def test_get_events(self):
+        response = self.client.get('/events/')
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
     def test_update_event(self):
         self.register(self.user1)
         self.get_token(self.user1)
