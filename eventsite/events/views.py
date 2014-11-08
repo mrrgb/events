@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+from django.shortcuts import render_to_response
+
 from datetime import datetime
 
 # Django
@@ -28,7 +31,7 @@ class RegistrationView(APIView):
 
         # Check format and unique constraint
         if not serializer.is_valid():
-            return Resposne(serializer.errors, \
+            return Response(serializer.errors, \
                             status = status.HTTP_400_BAD_REQUEST)
 
         data = serializer.data
@@ -97,3 +100,20 @@ class EventsView(APIView):
             )
             event.save()
             return Response(request.DATA, status = status.HTTP_200_OK)
+
+
+def defaultAll(request):
+
+    eventList = Event.objects.all()
+    print eventList
+    return render_to_response('index.html',{'events': eventList})
+
+
+
+
+
+
+
+
+
+

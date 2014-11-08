@@ -1,0 +1,17 @@
+html,body,div,ol,li,header{padding:0; margin:0;}
+body{font-size:16px;}
+ol{list-style: none;}
+li{line-height: 20px;margin-bottom:20px; border-radius:2px;}
+.wrapper{margin:0px;}
+header{line-height:30px; padding:10px; border-top:3px solid #FF9292;}
+.item{border-bottom:1px solid #cdcdcd; padding: 5px 10px;}
+
+
+header{font-size:20px;}
+header a{text-decoration: none; color:#333;}
+header a:visited{color:#333;}
+.date{font-size:16px; color:#888;}
+.tags{padding:10px;}
+.tags a{text-decoration: none; padding:5px 10px; background-color:#dedede; border-radius:2px; color:#555;}
+.location{font-size:14px; color:#555;}
+.desc{font-size:14px; color:#555;}

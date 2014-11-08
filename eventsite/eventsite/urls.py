@@ -14,4 +14,7 @@ urlpatterns = patterns('',
     url(r'^oauth2/', include('provider.oauth2.urls', namespace='oauth2')),
     url(r'^api-auth/', include('rest_framework.urls',\
         namespace='rest_framework')),
+    
+    #default homepage
+    url(r'^eventsDefault/$', views.defaultAll),
 )

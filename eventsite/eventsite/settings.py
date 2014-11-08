@@ -92,5 +92,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+BASE_DIR = os.getcwd()
+STATICFILES_DIRS = (
+                    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+                    # Always use forward slashes, even on Windows.
+                    # Don't forget to use absolute paths, not relative paths.
+                    os.path.join(BASE_DIR, "static"),"/Users/wangpeng/Documents/events/eventsite/static",
+                    )
 
 STATIC_URL = '/static/'
+TEMPLATE_DIRS = ('templates', )
